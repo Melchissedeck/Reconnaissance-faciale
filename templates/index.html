@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facial Recognition</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 2em;
+            color: #00d2ff;
+            margin-bottom: 20px;
+        }
+        input[type="file"] {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            border: none;
+            background: #243b55;
+            color: #b0c4de;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="file"]:hover {
+            background: #2c3e50;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            background: #00d2ff;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        button:hover {
+            background: #3a7bd5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Facial Recognition</h1>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <input type="file" name="known_image" accept="image/*" required>
+            <input type="file" name="unknown_image" accept="image/*" required>
+            <button type="submit">Compare Faces</button>
+        </form>
+    </div>
+</body>
+</html>
